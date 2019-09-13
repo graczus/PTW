@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookbook</title>
+     <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="subpagestyle2.css">
+</head>
+<body>
+<header>
+  <h1>CookBook</h1>
+</header>
+
+<section>
+ <nav>   
+     <a  href="index.php">Strona główna</a>
+     
+     <div class="dropdown">
+  <button class="dropbtn">Przepisy</button>
+  <div class="dropdown-content">
+    <a href="zupy.html">Zupy</a>
+    <a href="szybkiobiad.html">Szybki obiad</a>
+    <a href="desery.html">Desery</a>
+    <a href="vege.html">Vege</a>
+  </div>
+</div>
+     <a href="wynik.php" style="float:right">Wyszukaj</a>
+  </nav>
+     <article>
+        <h1>ZUPY</h1>
+        <img src="zupy.jpg" />
+        
+    </article>
+    
+    <h2>Zupa jarzynowa z cukinią i soczewicą</h2>
+      <div class="prep">
+        <h3>Przygotowanie</h3>
+        <ul>
+            <li>W większym garnku umieścić oliwę i masło, podgrzać.
+                   Dodać obraną oraz startą na tarce marchewkę, pokrojoną w kostkę cukinię oraz obrany i starty na drobnej tarce czosnek.
+                   Mieszając podsmażać przez ok. 2 minuty.</li>
+               
+               <li>Wlać gorący rosół lub bulion i zagotować. Dodać soczewicę oraz obranego i pokrojonego w kostkę ziemniaka.
+                   Doprawić solą, pieprzem i kurkumą. 
+                   Przykryć i gotować przez ok. 10 minut.</li>
+               
+               <li>Dodać obranego i pokrojonego w kostkę pomidora oraz posiekane różyczki brokuła lub kalafiora.
+                   Gotować przez ok. 5 minut. Pod koniec dodać tymianek lub koperek. 
+                   Odstawić z ognia i po kilku minutach wymieszać ze śmietaną.</li>
+               
+                </ul>
+         </div>
+     <div class="ingridients">
+        <h3>Składniki /3-4 porcje </h3>
+        <ul>
+            <li>1 łyżka oliwy + 1/2 łyżki masła</li>
+                <li>1 marchewka</li>
+                <li>1/2 cukinii</li>
+                <li>2 ząbki czosnku</li>
+                <li>2 litry rosołu lub bulionu drobiowego</li>
+                <li>5 łyżek czerwonej soczewicy</li>
+                <li>1 ziemniak</li>
+                <li>szczypta kurkumy</li>
+                <li>1/4 brokuła lub kalafiora</li>
+                <li>1 pomidor</li>
+                <li>tymianek lub koperek</li>
+                <li>1/4 szklanki śmietanki 30%</li>
+                </ul>
+                 </div>
+   
+            <aside>
+                <img src="jarzynowa_z_cukinia_soczewica_01.jpg" width="400"/>
+            </aside>
+    </section>
+    <footer>
+            <form action="opinions.php" method="post">
+             Nick <input type="text" name="firstname" required><br>
+            <textarea name="message" rows="10" cols="30" required>Napisz Komentarz..</textarea>
+            <input type="submit" value="Dodaj">
+            </form>
+        </footer>
+    </body>
+    
+</html>

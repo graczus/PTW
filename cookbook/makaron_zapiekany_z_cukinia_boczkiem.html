@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="subpagestyle2.css">
+<title>Cookbook</title>
+</head>
+<body>
+<header>
+  <h1>CookBook</h1>
+</header>
+
+<section>   
+     <nav>   
+     <a  href="index.php">Strona główna</a>
+     
+     <div class="dropdown">
+  <button class="dropbtn">Przepisy</button>
+  <div class="dropdown-content">
+    <a href="zupy.html">Zupy</a>
+    <a href="szybkiobiad.html">Szybki obiad</a>
+    <a href="desery.html">Desery</a>
+    <a href="vege.html">Vege</a>
+  </div>
+</div>
+     <a href="wynik.php" style="float:right">Wyszukaj</a>
+  </nav>
+      <article>
+        <h1>SZYBKI OBIAD</h1>
+        <img src="szybki_obiad.jpg"/>
+        
+    </article>
+    <h2>Makaron z boczkiem i cukinią</h2> 
+        <a>Ze śmietanką, porem i natką pietruszki</a>
+        
+        <div class="prep">
+            <h3>Przygotowanie</h3>
+            <ul>
+               <li>Makaron ugotować al dente w osolonej wodzie, odcedzić, włożyć z powrotem do garnka. 
+                    Piekarnik nagrzać do 190 stopni C (jeśli danie będziemy dodatkowo zapiekać).</li>
+               
+               <li>Na dużej patelni na oliwie zeszklić pokrojonego pora. Dodać drobno starty czosnek a następnie boczek pokrojony w kostkę.</li>
+               <li>Smażyć co chwilę mieszając przez ok. 5 minut, następnie dodać pokrojoną w kosteczkę cukinię i smażyć przez kolejne 5 minut.</li>
+
+               <li>Dodać posiekaną natkę pietruszki oraz śmietankę. Zagotować, doprawić solą oraz pieprzem. Dodać makaron i wymieszać.</li>
+               <li>Opcjonalnie danie można dodatkowo zapiec w piekarniku. W tym celu należy je przełożyć do naczynia żaroodpornego lub blaszki. 
+                   Posypać tartym serem i zapiekać bez przykrycia przez ok. 10 minut.</li>
+                <li>Jeśli dania nie zapiekamy, możemy posypać je serem już po nałożeniu na talerze.</li>
+            </ul>
+        </div>
+        
+         <div class="ingridients">
+             <h3>Składniki /4 porcje </h3>
+                <ul>
+                <li>250 g makaronu świderki</li>
+                <li>1 łyżka oliwy</li>
+                <li>200 g boczku wędzonego</li>
+                <li>1 por</li>
+                <li>1 nieduża cukinia</li>
+                <li>2 ząbki czosnku</li>
+                <li>2 łyżki posiekanej natki pietruszki</li>
+                <li>250 ml śmietanki 30% z kartonika</li>
+                <li>3 łyżki tartego sera twardego typu corregio, parmezan, bursztyn</li>
+                </ul>
+         </div>
+    
+      <aside>
+                <img src="makaron_zapiekany_z_cukinia_boczkiem_01.jpg" width="200"/>
+                <img src ="makaron_zapiekany_z_cukinia_boczkiem_02.jpg" width="200"/>
+            </aside>
+    </section>
+    <footer>
+            <form action="opinions.php" method="post">
+             Nick <input type="text" name="firstname" required><br>
+            <textarea name="message" rows="10" cols="30" required>Napisz Komentarz..</textarea>
+            <input type="submit" value="Dodaj">
+            </form>
+        </footer>
+    </body>
+    
+</html>
