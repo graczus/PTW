@@ -1,0 +1,153 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f5;
+  margin: 0;
+  font-family: Courier New;
+  
+}
+
+header {
+   float: left;
+   background-color: #fff2e6;
+   color: black;
+   font-size: 20px;
+   text-align: center;
+   font-family:Courier New; 
+   width: 100%;
+  
+}
+
+nav {
+  float: left ;
+  width: 100%;
+  height: 100%;
+  font-size: 150%;
+  background: #ffd9b3;
+  padding: 5px;
+  text-align: center;
+}
+
+a:link, a:visited {
+  color: black;
+  width: 20%;
+  text-decoration: none;
+  height: 50px;
+  display:inline-block;
+ 
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: black;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+.dropbtn {
+  background-color: #ffd9b3;
+  color: black;
+  padding: 16px;
+  font-size: 100%;
+  border: none;
+  font-family: Courier New;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: Courier New;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffcc99;
+  width: 200px;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.dropdown-content a {
+  color: black;
+  font-size: 80%;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ffd9b3;
+                            width:100%;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #ffd9b3;}
+
+
+article{
+    font-family: Bradley Hand, cursive;
+   text-align:center;
+ background-color:  #f0f0f5;
+  padding: 20px;
+  padding-top:10px;
+  width: 100%;
+  border-left: 2px solid  #52527a;
+  border-right: 2px solid  #52527a;
+  border-top: 5px solid  #52527a;
+  border-bottom: 5px solid  #52527a;
+    
+}
+.search{
+    background-color:#ffd9b3;
+    text-align:center;
+    font-size: 20px;
+    padding:10px;
+    border-style: dotted;
+    border-color:#52527a;
+    margin:40px;
+}
