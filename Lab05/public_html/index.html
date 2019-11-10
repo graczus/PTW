@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Cwiczenia 05</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+    
+ function add()
+ {
+     
+     var table = document.getElementById("table1");
+     var newtr = document.createElement("tr");
+     var newfirstname = document.createElement("td");
+     var newlastname = document.createElement("td");
+     var newemail = document.createElement("td");
+     var newage = document.createElement("td");
+     var newdate = document.createElement("td");
+     var newgender = document.createElement("td");
+     var newgroup = document.createElement("td");
+     newfirstname.innerHTML = document.getElementById("firstname").value;
+     newtr.appendChild(newfirstname);
+     newlastname.innerHTML = document.getElementById("lastname").value;      
+     newtr.appendChild(newlastname);
+     newemail.innerHTML = document.getElementById("email").value;
+     newtr.appendChild(newemail);
+     newage.innerHTML = document.getElementById("age").value;
+     newtr.appendChild(newage);
+     newdate.innerHTML = document.getElementById("date").value;
+     newtr.appendChild(newdate);
+     
+     
+     
+    
+     
+     if(document.getElementById("male").checked)
+     {
+     newgender.innerHTML = "Mężczyzna";
+     newtr.appendChild(newgender);
+     }
+     else if(document.getElementById("female").checked)
+     {
+     newgender.innerHTML = "Kobieta";
+     newtr.appendChild(newgender);
+     }
+         
+    var grupa= document.getElementById("group").value;
+     newgroup.innerHTML = grupa;
+     newtr.className =grupa;
+     newtr.appendChild(newgroup);
+ }
+ </script>
+</head>
+
+<body>
+
+<header>
+   <h1>Homework 05</h1>
+   
+</header>
+
+<section>
+  <nav>   
+     <a style="background-color:#ff6f61" href="index.html">Strona główna</a>
+     <a href="strona.html">Strona</a>
+     <a href="about.html">About</a>
+  </nav>
+  
+  <article>
+      
+<p></p>
+<div style="min-height: 500px">
+<table id="table1">
+    <tr>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Email</th>
+        <th>Wiek</th>
+        <th>Data urodzenia</th>
+        <th>Płeć</th>
+        <th>Grupa</th> 
+    </tr>
+</table>
+</div>
+<form>
+  Imię:<br>
+  <input type="text" id="firstname" name="firstname" placeholder="Wprowadz imię:"><br>
+  Nazwisko:<br>
+  <input type="text" id="lastname" name="lastname" placeholder="Wprowadz nazwisko:"><br>
+  Email:<br>
+  <input type="email" id="email" name="email" placeholder="Wprowadz adres email:"><br>
+  Wiek:<br>
+  <input type="number" id="age" name="age" placeholder="Wprowadz wiek:"><br>
+  Data urodzenia:<br>
+  <input type="date" id="date" name="date"><br>
+  Płeć:<br>
+  <input type="radio" id="male" name="gender" value="m">Mężczyzna<br>
+  <input type="radio" id="female" name="gender" value="f">Kobieta<br>
+  Grupa:<br>
+  <select id="group" name="group">
+       <option >Rodzina</option>
+        <option >Przyjaciele</option>
+        <option >Praca</option>
+        <option >Znajomi</option>
+      </select> 
+<button type="button" onclick="add()">Dodaj</button>
+</form>
+  
+  </article>
+</section>
+
+</body>
+</html>

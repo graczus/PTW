@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: Arial, Helvetica;
+  background-color: #e6ffe6;
+  color: black;
+  width: 100%;
+
+}
+header {
+   background-color: #d24dff;
+   color: black;
+   text-align: center;
+   width: 100%;
+}
+
+nav {
+   width: 100%;
+  height: 100%;
+  font-size: 120%;
+  background: #ecb3ff;
+  padding: 0px;
+}
+aside {
+    background-color: #c61aff;
+    float: left;
+    width: 10%;
+}
+section {
+    float: right;
+    width: 90%;
+}
+@media (max-width: 600px) {
+  aside, section {
+    width: 100%;
+  }
+}
+@media (min-height: 200px) {
+  aside, section {
+      min-height: 220px;
+  }
+}
+footer {
+  float: right;
+  background-color: #c61aff;
+  text-align: center;
+  color: white;
+}
