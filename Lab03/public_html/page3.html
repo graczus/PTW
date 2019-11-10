@@ -1,0 +1,120 @@
+
+<html>
+<head>
+<title>Cwiczenia 03</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="03.css">
+
+<script>
+    function add()
+   {
+     var x = Number(document.getElementById("number1").value);
+     var y = Number(document.getElementById("number2").value);
+     if(x<0||x>100||y<0||y>100)
+     {
+     document.getElementById("wynik").innerHTML ="Proszę wprowadzić liczby z przedziału od 0 do 100";   
+     }
+     else
+     {
+     var wynik = x + y;
+     document.getElementById("wynik").innerHTML =x+"+"+y+"="+wynik;
+     }
+    }
+    function sub()
+    {
+      var x = Number(document.getElementById("number1").value);
+      var y = Number(document.getElementById("number2").value);
+      if(x<0||x>100||y<0||y>100)
+     {
+     document.getElementById("wynik").innerHTML ="Proszę wprowadzić liczby z przedziału od 0 do 100";   
+     }
+     else
+     {
+      var wynik = x - y;
+      document.getElementById("wynik").innerHTML =x+"-"+y+"="+wynik;
+     }
+    }
+    function mul()
+    {
+      var x = Number(document.getElementById("number1").value);
+      var y = Number(document.getElementById("number2").value);
+      if(x<0||x>100||y<0||y>100)
+      {
+       document.getElementById("wynik").innerHTML ="Proszę wprowadzić liczby z przedziału od 0 do 100";   
+      }
+      else
+      {
+      var wynik = x * y;
+      document.getElementById("wynik").innerHTML =x+"*"+y+"="+wynik;
+      }
+    }
+    function div()
+    {
+      var x = Number(document.getElementById("number1").value);
+      var y = Number(document.getElementById("number2").value);
+      if(x<0||x>100||y<0||y>100)
+      {
+       document.getElementById("wynik").innerHTML ="Proszę wprowadzić liczby z przedziału od 0 do 100";   
+      }
+      else
+      {
+      var wynik = x / y;
+      document.getElementById("wynik").innerHTML =x+":"+y+"="+wynik;
+      }
+    }
+    function oper()
+    {
+      var operation = document.getElementById("oper").value;
+      if(operation==="+")
+      {
+          add();
+      }
+      else if(operation==="-")
+      {
+          sub();
+      }
+      else if(operation==="*")
+      {
+          mul();
+      }
+      else if(operation==="/")
+      {
+          div();
+      }
+    }
+</script>
+</head>
+    <body>
+
+<header>
+    <h1>Homework 03</h1>
+</header>
+
+<section>
+  <nav>
+     <a style="background-color:#404040" href="index.html">Strona główna</a>
+     <a style="background-color:#404040" href="page2.html">Galeria</a>
+     <a style="background-color:#404040" href="page3.html">Kalkulator</a>
+  </nav>
+  
+  <article>
+  
+  <p> 
+     <input id='number1' type="number" min="0" max="100" placeholder="Pierwsza liczba..."> 
+      <select id='oper' name="operation">
+       <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">:</option>
+      </select> 
+     <input id='number2' type="number" min="0" max="100" placeholder="Druga liczba..."> 
+     <button type="button" onclick="oper()">=</button> 
+     
+ </p> 
+ <p id="wynik"></p>
+  </article>
+</section>
+
+</body>
+</html>

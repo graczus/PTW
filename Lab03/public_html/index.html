@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<title>Cwiczenia 03</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="03.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Homework 03</h1>
+</header>
+
+<section>
+  <nav>   
+     <a style="background-color:#404040" href="index.html">Strona główna</a>
+     <a style="background-color:#404040" href="page2.html">Galeria</a>
+     <a style="background-color:#404040" href="page3.html">Kalkulator</a>
+  </nav>
+  
+  <article>
+      
+ <p id="demo">Czy warto jechać na Lanzarote? </p>
+
+<button id= "btn1" type="button" onclick='document.getElementById("demo").innerHTML = document.getElementById("demo3").innerHTML; 
+    document.getElementById("btn1").style.display = "none";
+    document.getElementById("btn2").style.display = "block"'>Sprawdź!</button>     
+<p id="demo3" style="display:none">Lanzarote – należąca do Hiszpanii wyspa na Oceanie Atlantyckim, będąca częścią archipelagu Wysp Kanaryjskich</p>
+<button id= "btn2" type="button" style="display:none" onclick="document.getElementById('demo2').style.display='block';
+    ; getElementById('btn2').style.display='none'">Potrzebujesz więcej info?</button>
+
+<p id="demo2" style="display:none">Natura, natura i jeszcze raz natura. I to pod każdą możliwą postacią! Lanzarote jest niezwykle zróżnicowana i oferuje 
+    nam wyjątkowe widoki. Na wyspie dominuje krajobraz wulkaniczny, który przenosi nas w zupełnie inny, kosmiczny wymiar </p>
+<p></p>
+<button onclick="document.getElementById('myImage').scr='lanz2.jpg'">Arrecife</button>
+
+
+<img id="myImage" src="lanz2.jpg" alt="lanz2" style="width:400px">
+
+<button onclick="document.getElementById('myImage').src='lanz6.jpg'">Zobacz piękną plażę</button>
+<p></p>
+<button id='demo4' type="button" onclick="document.getElementById('myImage').style.width='800px'; 
+    document.getElementById('demo4').style.display='none'">Powieksz zdjecie!</button>
+<button onclick="document.getElementById('myImage').src='lanz2.jpg';
+    document.getElementById('myImage').style.width='800px'">Cofnij</button>
+  </article>
+</section>
+
+</body>
+</html>
