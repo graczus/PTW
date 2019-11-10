@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+}
+header {
+   background-color: #577284;
+   color: white;
+   font-size: 40px;
+   text-align: center;
+   padding: 30px;
+   min-width: 100%;
+}
+article {
+  float: left;
+  margin-left: 10%;
+  margin-bottom: 1%;
+  margin-right: 10%;
+  margin-top: 5%;
+  padding: 20px;
+  width: auto;
+  
+}
+section {
+ border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+.article {
+    margin-left: 1%;
+}
+button {
+  background-color: #577284;
+  border: none;
+  color: white;
+  padding: 13px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+.comment {
+    border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px ;
+}
+
+.datenick {
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.commenttext {
+    margin-left: 10%;
+}
+.delete {
+    float: right;
+    margin-left: 5%;
+    margin-right: 5%;
+}
