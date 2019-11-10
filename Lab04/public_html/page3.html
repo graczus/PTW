@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Cwiczenia 04</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<script>
+function convert(amount, currency)
+{   
+    var result_amount;
+    if(amount&&amount>0)
+    {
+        if(currency==="D")
+        {
+            result_amount=amount/3.82;
+            document.getElementById("result").innerHTML = result_amount.toFixed(2)+" $";
+        }
+        else if(currency==="E")
+        {
+            result_amount=amount/4.28;
+            document.getElementById("result").innerHTML = result_amount.toFixed(2)+" €";
+         }
+    }
+    else
+    {
+        alert("Wprowadź poprawną kwotę");
+        document.getElementById("result").innerHTML = "Wprowadź poprawną kwotę";
+    }
+}
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Homework 04</h1>
+</header>
+
+<section>
+  <nav>   
+     <a href="index.html">Strona główna</a>
+     <a href="page2.html">Serial</a>
+     <a style="background-color:#577284" href="page3.html">Narzędzia</a>
+  </nav>
+  
+  <article>
+      
+<h1>Podaj kwotę w złotówkach do przeliczenia:</h1>
+<input class="number" id='amount' type="number" step="0.01" min="0" placeholder="Wprowadz kwote w PLN">
+
+<h1>Wybierz walute docelową:</h1>
+  <select id='currency' name="currency">
+       <option value="E">Euro</option>
+        <option value="D">Dolar</option>
+      </select> 
+<button type="button" onclick="convert(amount.value, currency.value)">Przelicz</button>
+
+<h1>Otrzymana kwota w walucie docelowej:</h1>
+<div id="result"></div>
+  </article>
+</section>
+
+</body>
+</html>

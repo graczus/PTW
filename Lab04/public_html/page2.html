@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Cwiczenia 04</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+    
+ function add()
+ {
+     var table = document.getElementById("table1");
+     var newtr = document.createElement("tr");
+     var newnumber = document.createElement("td");
+     var newtitle = document.createElement("td");
+     newnumber.innerHTML = document.getElementById("number").value;
+     newtr.appendChild(newnumber);
+     newtitle.innerHTML = document.getElementById("title").value;            //tworzenie nowego wiersza za pomoca funkcji appendChild()
+     newtr.appendChild(newtitle);
+     table.appendChild(newtr);
+ }
+ function deleteRow(number)
+ {   
+     if(number>0&&document.getElementById("table1").rows.length>number)
+     {
+     var table = document.getElementById("table1");
+     table.deleteRow(number);
+     }
+     else
+     {
+          alert("Wprowadz poprawny numer");
+     }
+ }
+ function edit(number)
+ {
+     if(number>0&&document.getElementById("table1").rows.length>number)
+     {
+     var table = document.getElementById("table1");
+     table.deleteRow(number);
+     var newrow = table.insertRow(number);
+     var newcell1 = newrow.insertCell(0);               
+     var newcell2 = newrow.insertCell(1);
+     newcell1.innerHTML = document.getElementById("number4").value;
+     newcell2.innerHTML = document.getElementById("title2").value;
+     }
+     else
+     {
+          alert("Wprowadz poprawny numer");
+     }
+ }
+</script>
+</head>
+
+<body>
+
+<header>
+  <h1>Homework 04</h1>
+</header>
+
+<section>
+  <nav>   
+     <a href="index.html">Strona główna</a>
+     <a style="background-color:#577284" href="page2.html">Serial</a>
+     <a href="page3.html">Narzędzia</a>
+  </nav>
+  
+  <article>
+      <img src="plakat.jpg" style="width:50%">
+      <h3>Sezon 1</h3>
+ <table id='table1' style="width:50%">
+  <tr>
+    <th class="numer">Odcinek</th>
+    <th class="tytul">Tytuł</th>
+  </tr>
+  <tr>
+    <td class="numer">1</td>
+    <td class="tytul">Pilot</td>
+  </tr>
+  <tr>
+    <td class="numer">2</td>
+    <td class="tytul">The One with the Sonogram at the End</td>
+  </tr>
+  <tr>
+    <td class="numer">3</td>
+    <td class="tytul">The One with the Thumb</td>
+  </tr>
+  <tr>
+    <td class="numer">4</td>
+    <td class="tytul">The One with George Stephanopoulos</td>
+  </tr>
+  <tr>
+    <td class="numer">5</td>
+    <td class="tytul">The One with the East German Laundry Detergent</td>
+  </tr>
+   <tr>
+    <td class="numer">6</td>
+    <td class="tytul">The One with the Butt</td>
+  </tr>
+   <tr>
+    <td class="numer">7</td>
+    <td class="tytul">The One with the Blackout</td>
+  </tr>
+  
+   <tr>
+    <td class="numer">8</td>
+    <td class="tytul"> The One Where Nana Dies Twice</td>
+  </tr>
+   <tr>
+    <td class="numer">9</td>
+    <td class="tytul"> The One Where Underdog Gets Away</td>
+  </tr>
+   <tr>
+    <td class="numer">10</td>
+    <td class="tytul">The One with the Monkey</td>
+  </tr>
+   <tr>
+    <td class="numer">11</td>
+    <td class="tytul">The One with Mrs. Bing</td>
+  </tr>
+   <tr>
+    <td class="numer">12</td>
+    <td class="tytul">The One with the Dozen Lasagnas</td>
+  </tr>
+  <tr>
+    <td class="numer">13</td>
+    <td class="tytul">The One with the Boobies</td>
+  </tr>
+  <tr>
+    <td class="numer">14</td>
+    <td class="tytul">The One with the Candy Hearts</td>
+  </tr>
+  <tr>
+    <td class="numer">15</td>
+    <td class="tytul">The One with the Stoned Guy</td>
+  </tr>
+  <tr>
+    <td class="numer">16</td>
+    <td class="tytul">The One with Two Parts (1)</td>
+  </tr>
+  <tr>
+    <td class="numer">17</td>
+    <td class="tytul">The One with Two Parts (2)</td>
+  </tr>
+  <tr>
+    <td class="numer">18</td>
+    <td class="tytul">The One with All the Poker</td>
+  </tr>
+  <tr>
+    <td class="numer">19</td>
+    <td class="tytul">The One Where the Monkey Gets Away</td>
+  </tr>
+  <tr>
+    <td class="numer">20</td>
+    <td class="tytul">The One with the Evil Orthodontist</td>
+  </tr>
+  <tr>
+    <td class="numer">21</td>
+    <td class="tytul">The One with the Fake Monica</td>
+  </tr>
+  <tr>
+    <td class="numer">22</td>
+    <td class="tytul">The One with the Ick Factor</td>
+  </tr>
+  <tr>
+    <td class="numer">23</td>
+    <td class="tytul">The One with the Birth</td>
+  </tr>
+  <tr>
+    <td class="numer">24</td>
+    <td class="tytul">The One Where Rachel Finds Out</td>
+  </tr>
+</table> 
+      
+      
+ <h1>Dodaj wiersz: </h1>
+<input class="number" id='number' type="number" placeholder="Podaj numer odcinka...">
+<input id='title' type="text" placeholder="Podaj tytul odcinka...">
+<button id= 'btn' type="button" onclick="add()">Dodaj</button>
+
+<h1>Usuń wybrany wiersz: </h1>
+<input class="edit" id='number2' type="number" placeholder="Wprowadz numer wiersza ktory chcesz usunać...">
+<button id= 'btn2' type="button" onclick="deleteRow(number2.value)">Usuń</button>
+
+<h1>Edytuj wybrany wiersz: </h1>
+<input class="edit" id='number3' type="number" placeholder="Wprowadz numer wiersza ktory chcesz edytować...">
+<input class="number" id='number4' type="number" placeholder="Podaj nowy numer odcinka...">
+<input id='title2' type="text" placeholder="Podaj nowy tytul odcinka...">
+<button id= 'btn3' type="button" onclick="edit(number3.value)">Edytuj</button>
+<p></p>
+
+<h3>Sezon 2</h3>
+<table class="table2" style="width:50%">
+  <tr>
+    <th class="numer">Odcinek</th>
+    <th class="tytul">Tytuł</th>
+  </tr>
+  <tr>
+    <td class="numer">1</td>
+    <td class="tytul">The One with Ross's New Girlfriend</td>
+  </tr>
+  <tr>
+    <td class="numer">2</td>
+    <td class="tytul">The One with the Breast Milk</td>
+  </tr>
+  <tr>
+    <td class="numer">3</td>
+    <td class="tytul">The One Where Heckles Dies</td>
+  </tr>
+  <tr>
+    <td class="numer">4</td>
+    <td class="tytul">The One with Phoebe's Husband</td>
+  </tr>
+  <tr>
+    <td class="numer">5</td>
+    <td class="tytul">The One with Five Steaks and an Eggplant</td>
+  </tr>
+   <tr>
+    <td class="numer">6</td>
+    <td class="tytul">The One with the Baby on the Bus</td>
+  </tr> 
+  <tr>
+    <td class="numer">7</td>
+    <td class="tytul">The One Where Ross Finds Ou</td>
+  </tr>
+  <tr>
+    <td class="numer">8</td>
+    <td class="tytul">The One with the List</td>
+  </tr> 
+  <tr>
+    <td class="numer">9</td>
+    <td class="tytul">The One with Phoebe's Dad</td>
+  </tr>
+  <tr>
+    <td class="numer">10</td>
+    <td class="tytul">The One with Russ</td>
+  </tr>
+  <tr>
+    <td class="numer">11</td>
+    <td class="tytul">The One with the Lesbian Wedding</td>
+  </tr>
+  <tr>
+    <td class="numer">12</td>
+    <td class="tytul"> The One After the Super Bowl (1)</td>
+  </tr>
+  <tr>
+    <td class="numer">13</td>
+    <td class="tytul">The One After the Super Bowl (2)</td>
+  </tr> 
+  <tr>
+    <td class="numer">14</td>
+    <td class="tytul">The One with the Prom Video</td>
+  </tr> 
+  <tr>
+    <td class="numer">15</td>
+    <td class="tytul">The One Where Ross and Rachel...You Know</td>
+  </tr> 
+  <tr>
+    <td class="numer">16</td>
+    <td class="tytul">The One Where Joey Moves Out</td>
+  </tr> 
+  <tr>
+    <td class="numer">17</td>
+    <td class="tytul">The One Where Eddie Moves In</td>
+  </tr> 
+  <tr>
+    <td class="numer">18</td>
+    <td class="tytul">The One Where Dr. Ramoray Dies</td>
+  </tr> 
+  <tr>
+    <td class="numer">19</td>
+    <td class="tytul">The One Where Eddie Won't Go</td>
+  </tr>
+  
+  <tr>
+    <td class="numer">20</td>
+    <td class="tytul">The One Where Old Yeller Dies</td>
+  </tr>
+  <tr>
+    <td class="numer">21</td>
+    <td class="tytul">The One with the Bullies</td>
+  </tr>
+  <tr>
+    <td class="numer">22</td>
+    <td class="tytul">The One with the Two Parties</td>
+  </tr>
+  <tr>
+    <td class="numer">23</td>
+    <td class="tytul">The One with the Chicken Pox</td>
+  </tr>
+  <tr>
+    <td class="numer">24</td>
+    <td class="tytul">The One with Barry and Mindy's Wedding</td>
+  </tr>
+</table> 
+<p></p>
+
+
+<br>
+<br>
+<h3>Sezon 3</h3>
+<table id="table3" style="width:50%">
+    <tr>
+    <th class="numer">Odcinek</th>
+    <th class="tytul">Tytuł</th>
+  </tr>
+  <tr>
+    <td class="numer">1</td>
+    <td class="tytul">The One with the Princess Leia Fantasy</td>
+  </tr>
+  <tr>
+    <td class="numer">2</td>
+    <td class="tytul">The One Where No One's Ready</td>
+  </tr>
+  <tr>
+    <td class="numer">3</td>
+    <td class="tytul">The One with the Jam</td>
+  </tr>
+  <tr>
+    <td class="numer">4</td>
+    <td class="tytul">The One with the Metaphorical Tunnel</td>
+  </tr>
+  <tr>
+    <td class="numer">5</td>
+    <td class="tytul">The One with Frank Jr.</td>
+  </tr>
+  <tr>
+    <td class="numer">6</td>
+    <td class="tytul">The One with the Flashback</td>
+  </tr>
+  <tr>
+    <td class="numer">7</td>
+    <td class="tytul">The One with the Race Car Bed</td>
+  </tr>
+  <tr>
+    <td class="numer">8</td>
+    <td class="tytul">The One with the Giant Poking Device</td>
+  </tr>
+  <tr>
+    <td class="numer">9</td>
+    <td class="tytul">The One with the Football</td>
+  </tr>
+  <tr>
+    <td class="numer">10</td>
+    <td class="tytul">The One Where Rachel Quits</td>
+  </tr>
+  <tr>
+    <td class="numer">11</td>
+    <td class="tytul">The One Where Chandler Can't Remember Which Sister</td>
+  </tr>
+  <tr>
+    <td class="numer">12</td>
+    <td class="tytul">The One with All the Jealousy</td>
+  </tr>
+  <tr>
+    <td class="numer">13</td>
+    <td class="tytul">The One Where Monica and Richard Are Just Friends</td>
+  </tr>
+  <tr>
+    <td class="numer">14</td>
+    <td class="tytul">The One with Phoebe's Ex-Partner</td>
+  </tr>
+  <tr>
+    <td class="numer">15</td>
+    <td class="tytul">The One Where Ross and Rachel Take a Break (1)</td>
+  </tr>
+  <tr>
+    <td class="numer">16</td>
+    <td class="tytul">The One with the Morning After (2)</td>
+  </tr>
+  <tr>
+    <td class="numer">17</td>
+    <td class="tytul">The One Without the Ski Trip</td>
+  </tr>
+  <tr>
+    <td class="numer">18</td>
+    <td class="tytul">The One with the Hypnosis Tape</td>
+  </tr>
+  <tr>
+    <td class="numer">19</td>
+    <td class="tytul">The One with the Tiny T-Shirt</td>
+  </tr>
+  <tr>
+    <td class="numer">20</td>
+    <td class="tytul">The One with the Dollhouse</td>
+  </tr>
+  <tr>
+    <td class="numer">21</td>
+    <td class="tytul">The One with a Chick and a Duck</td>
+  </tr>
+  <tr>
+    <td class="numer">22</td>
+    <td class="tytul">The One with the Screamer</td>
+  </tr>
+  <tr>
+    <td class="numer">23</td>
+    <td class="tytul">The One with Ross's Thing</td>
+  </tr>
+  <tr>
+    <td class="numer">24</td>
+    <td class="tytul">The One with the Ultimate Fighting Champion</td>
+  </tr>
+  <tr>
+    <td class="numer">25</td>
+    <td class="tytul">The One at the Beach</td>
+  </tr>
+</table> 
+
+<p></p>
+  </article>
+</section>
+
+</body>
+</html>
